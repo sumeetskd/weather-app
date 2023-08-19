@@ -68,3 +68,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Notes - Docker
+
+add instruction for base image
+
+set the working directory within container
+
+copy package.json and package-lock.json ot the container
+
+install project dependencies
+
+copy the application code into the container
+
+build the app
+
+expose the port that the application will run on
+
+command to start the app
+
+-------------------------------
+to check the running container:
+
+docker ps
+
+to run the image-
+
+docker run -d -p 3000:3000 --name weather-app weather-app
+
+You can use this container name to interact with the container, such as stopping it or accessing its logs:
+
+docker stop weather-app
+docker logs weather-app
